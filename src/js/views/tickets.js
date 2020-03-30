@@ -11,7 +11,7 @@ class TicketUI {
     );
     favoriteContainer.addEventListener("click", e => {
       e.preventDefault();
-      this.favorite.getFavoriteValue(e.target);
+      this.favorite.getFavoriteValue(e.toElement);
     });
   }
 

@@ -11,8 +11,9 @@ class FavoriteUI {
 
   serializeFavorite(parent) {
     const ticketsOn = Object.values(locations.lastSeatch).find(ticket => {
-      ticket.departure_at === parent;
-      return ticket;
+      if (ticket.departure_at === parent) {
+        return ticket;
+      }
     });
     this.renderFavorite(ticketsOn);
   }
